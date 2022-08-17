@@ -1,0 +1,22 @@
+<div class="login">
+    <div class="row">
+        <div class="col-xs-12">
+            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" >
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="email" class="form-control" ngModel name="username"
+                    required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="password">Password </label>
+                    <input type="password" id="password" class="form-control" ngModel name="password">
+                </div>
+                <br>
+                <div>
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
