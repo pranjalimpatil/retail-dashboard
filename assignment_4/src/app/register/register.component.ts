@@ -16,15 +16,15 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(form :NgForm){
   
-    if(!form.valid)return;
-   console.log(form.value);
+    if(!form.valid)return ;
+  
     const username=form.value.username;
     const password= form.value.password;
 
     this.registerService.register(username,password).subscribe(
       resData=>{
-        console.log(resData);
-        this.router.navigate(['/log_in'])
+        alert("user registration successfull");
+        this.router.navigate(['/auth'])
       },error=>{
         console.log(error);
       }

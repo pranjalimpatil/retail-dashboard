@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
  import {HttpClient } from '@angular/common/http';
 import {throwError,Subject} from 'rxjs';
-import {User}from './user.model';
+
 
 interface AuthResponse{
   username:string;
@@ -14,7 +14,7 @@ interface AuthResponse{
 
 export class AuthService {
 
-  user =new Subject<User>();
+ 
 
   constructor(private http:HttpClient) { }
   login(username:string,password:string){

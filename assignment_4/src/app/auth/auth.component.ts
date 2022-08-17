@@ -18,14 +18,13 @@ export class AuthComponent implements OnInit {
   onSubmit(form :NgForm){
   
       if(!form.valid)return;
-     console.log(form.value);
+  
       const username=form.value.username;
       const password= form.value.password;
  
       this.authService.login(username,password).subscribe(
         resData=>{
-          console.log(resData);
-          console.log(resData.token);
+          alert("login successfull redirecting you to dashboard");
           localStorage.setItem('token',resData.token);
           this.router.navigate(['/dashboard'])
         },error=>{
