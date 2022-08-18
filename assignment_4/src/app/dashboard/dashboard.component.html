@@ -1,0 +1,81 @@
+   
+   <!DOCTYPE html>
+   <html lang="en">
+   
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+      
+           
+   
+   </head>
+   
+   <body>
+   <div class="dash">
+   <br>
+    <h1>Dashboard</h1>
+    <br>
+
+    <div>
+        <div id="sale">
+            <div id="s"> 
+                <h3 id="t">{{totalsales}} </h3>
+                <h3>Total Sales</h3>
+                <h3 style="color: white;">increased by 60 %</h3>
+            </div>
+           
+        </div>
+
+        <div id="unq">
+            <div id="u">
+            <h3 id="cust">{{uniquevisitors}}</h3>
+            <h3>Unique Vistors</h3>
+            <h3 style="color: white;">increased by 40 %</h3>
+            </div>
+
+        </div>
+
+        <div id="amt">
+          <div id="a">
+            <h3 id="avg_amt">{{averagesales}}</h3>
+            <h3>Average Sales</h3>
+            <h3 style="color: white;">increased by 50 %</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <h2>Product Table</h2>
+        <div>
+            <table>
+                <tr>
+                    <th>Product ID</th>
+                    <th>User ID</th>
+                    <th>Product Description</th>
+                    <th>Sales Amount</th>
+                </tr>
+
+                <tbody id="daily_sales">
+                    <tr *ngFor="let i of sold_items">
+                        <td>{{i.product_id}}</td>
+                        <td>{{i.user_id}}</td>
+                        <td>{{i.product_des}}</td>
+                        <td>{{i.sale_amount}}</td>
+                    </tr>
+
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+    </div>
+</div>
+<!-- <button class="btn btn-primary" (ngSubmit)="OnSubmit()">View Transaction</button> -->
+</body>
+
+</html>
+
